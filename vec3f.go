@@ -155,6 +155,10 @@ func (v *Vec3f) Scale(f float32) Vec3f {
 		v.Z * f}
 }
 
+func (v *Vec3f) ToVec3d() Vec3d {
+	return Vec3d{float64(v.X), float64(v.Y), float64(v.Z)}
+}
+
 func LerpVec3f(v0, v1 Vec3f, t float32) Vec3f {
 	it := 1.0 - t
 	return Vec3f{v0.X*it + v1.X*t,
