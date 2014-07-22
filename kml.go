@@ -91,3 +91,7 @@ func Saturatef(v float32) float32 {
 func Gamma(v, gamma float32) float32 {
 	return Fabs(float32(math.Pow(float64(v), float64(gamma)))) * Sign(v)
 }
+
+func Lerpf(v0, v1, b float32) float32 {
+	return v0*(1.0-b) + v1*b
+}
